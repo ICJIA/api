@@ -1,11 +1,11 @@
 'use strict';
 
-module.exports = function(Permalink) {
+module.exports = function(Plink) {
 
- var validateUUID = require('uuid-validate');
+var validateUUID = require('uuid-validate');
 
   // mdContent must be at least 3 characters
-  Permalink.validatesLengthOf('mdContent', {
+  Plink.validatesLengthOf('mdContent', {
     min: 3,
     message: {
       min: 'Markdown content must be at least 3 characters.'
@@ -19,14 +19,12 @@ module.exports = function(Permalink) {
     }
   }
 
-  Permalink.validate('permalink',validatesUUID, {
+  Plink.validate('permalink',validatesUUID, {
     message: 'Permalink must be a valid UUID'
   })
 
   // permalink must be unique
-  Permalink..validatesUniquenessOf('permalink')
-
-
+  Plink.validatesUniquenessOf('permalink')
 
 
 

@@ -1,6 +1,6 @@
 {
-  "name": "permalink",
-  "plural": "permalinks",
+  "name": "plink",
+  "plural": "plinks",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {

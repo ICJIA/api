@@ -35,14 +35,7 @@
     "dataSource": "db",
     "public": false
   },
-  "Note": {
-    "dataSource": "db"
-  },
-  "link": {
-    "dataSource": "mongodb",
-    "public": true
-  },
-  "permalink": {
+  "plink": {
     "dataSource": "mongodb",
     "public": true
   }

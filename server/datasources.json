@@ -6,7 +6,7 @@
   "mongodb": {
     "host": "",
     "port": 0,
-    "url": "mongodb://localhost:27017/links",
+    "url": "mongodb://localhost:27017/permalink",
     "database": "",
     "password": "",
     "name": "mongodb",
