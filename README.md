@@ -6,21 +6,21 @@ The API is hosted on a [DigitalOcean](https://www.digitalocean.com/) droplet run
 
 For local development, make sure [Node](https://nodejs.org/en/) and [MongoDB](https://www.mongodb.com/) are installed.
 
-I'm using [PM2](https://github.com/Unitech/pm2) to manage the production API instance (and automatically restart when necessary).
+I'm using [PM2](https://github.com/Unitech/pm2) to manage the production Node instance (and automatically restart when necessary).
 
 ```
 cd <API_DIRECTORY>
 
 sudo pm2 start .
 ```
-After a GitHub pull:
+After a ```git pull``` or automatic deployment, restart the app manually:
 ```
 cd <API_DIRECTORY>
 
 sudo pm2 restart .
 ```
 ## Ngnix setup
-You'll want to set up a reverse proxy and expose the localhost:8080 process. 
+Expose the localhost:8080 process with a reverse proxy. 
 
 In your ```/etc/nginx/sites-available/<SITENAME>```:
 ```
