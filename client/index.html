@@ -1,0 +1,113 @@
+<head>
+  <title>ICJIA | Markdown Editor API</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <script src="https://use.fontawesome.com/2b0dc300da.js"></script>
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900" rel=stylesheet>
+  <!-- Google Fonts -->
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+
+<!-- CSS Reset -->
+<link rel="stylesheet" href="//cdn.rawgit.com/necolas/normalize.css/master/normalize.css">
+
+<!-- Milligram CSS minified -->
+<link rel="stylesheet" href="//cdn.rawgit.com/milligram/milligram/master/dist/milligram.min.css">
+
+  <style>
+          * {
+        margin: 0;
+      }
+      html, body {
+        height: 100%;
+      }
+      .page-wrap {
+        min-height: 100%;
+        /* equal to footer height */
+        margin-bottom: -70px;
+      }
+      .page-wrap:after {
+        content: "";
+        display: block;
+      }
+      .site-footer, .page-wrap:after {
+        height: 70px;
+        text-align: center;
+      }
+      .site-footer {
+        background: #eee;
+      }
+      h1 {font-weight: 900}
+      .center {
+    display:flex;justify-content:center;align-items:center;
+}
+      .header {text-align: center; padding-top: 50px}
+      footer {font-size: 14px;}
+  </style>
+</head>
+<body>
+  <div class="page-wrap">
+
+
+
+      <div class="center header">
+        <a href="">
+        <img src='http://www.icjia.org/assets/logos/logo.png' width="150"/>
+      </a>
+      </div>
+      <!-- <div class="center" style="padding-top: 50px">
+    <h1>ICJIA API</h1>
+  </div> -->
+
+
+
+  <div class="center" style="margin-top: 100px;">
+      <div class="status" style="width: 280px;">
+      <div class="">
+        <strong>Started:</strong>
+      <span id="started"></span>
+    </div>
+
+    <div class="">
+      <strong>Uptime:</strong>
+      <span id="uptime"></span>
+    </div>
+
+
+  </div></div>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+  </div>
+    <footer class="site-footer">
+      <div style="padding-top: 22px;">
+        <p>
+          <a href="http://www.icjia.state.il.us">Illinois Criminal Justice Information Authority</a>&nbsp;&nbsp;|&nbsp;&nbsp;<i class="fa fa-github" aria-hidden="true"></i>&nbsp;
+          <a href="https://github.com/ICJIA/icjia-markdown-api">View on Github</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+          <a href="https://markdown.icjia.cloud">Markdown Editor</a>
+
+        </p>
+      </div>
+    </footer>
+    <script>
+      $.getJSON( "/status", function( data ) {
+        var items = [];
+        var uptime = moment.utc(data["uptime"]*1000).format('HH:mm:ss')
+        var started = moment(data["started"]).format('MMMM Do YYYY, h:mm:ss a')
+        $('#uptime').html(uptime)
+        $('#started').html(started)
+      });
+</script>
+</body>
