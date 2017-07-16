@@ -1,0 +1,27 @@
+{
+  "name": "link",
+  "plural": "links",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "permalink": {
+      "type": "string",
+      "required": true
+    },
+    "mdContent": {
+      "type": "string",
+      "required": true
+    },
+    "date": {
+      "type": "date",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
