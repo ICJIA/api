@@ -11,13 +11,13 @@ I'm using [PM2](https://github.com/Unitech/pm2) to manage the production Node in
 ```
 cd <API_DIRECTORY>
 
-sudo pm2 start .
+sudo pm2 start . --name api
 ```
 After a ```git pull``` or automatic deployment, restart the app manually:
 ```
 cd <API_DIRECTORY>
 
-sudo pm2 restart .
+sudo pm2 restart api
 ```
 ## Ngnix setup
 Expose the API (localhost:3000) process with a reverse proxy. 
