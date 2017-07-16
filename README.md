@@ -20,13 +20,13 @@ cd <API_DIRECTORY>
 sudo pm2 restart .
 ```
 ## Ngnix setup
-Expose the localhost:8080 process with a reverse proxy. 
+Expose the API (localhost:3000) process with a reverse proxy. 
 
 In your ```/etc/nginx/sites-available/<SITENAME>```:
 ```
 . . .
     location / {
-        proxy_pass http://localhost:8080;
+        proxy_pass http://localhost:3000;
         proxy_http_version 1.1;
         proxy_set_header Upgrade $http_upgrade;
         proxy_set_header Connection 'upgrade';
