@@ -27,6 +27,7 @@
     "eslint-config-loopback": "^8.0.0",
     "nodemon": "^1.11.0",
     "nsp": "^2.1.0",
+    "random-js": "^1.0.8",
     "uuid-validate": "0.0.2"
   },
   "repository": {

@@ -38,5 +38,9 @@
   "plink": {
     "dataSource": "mongodb",
     "public": true
+  },
+  "shortlink": {
+    "dataSource": "mongodb",
+    "public": true
   }
 }

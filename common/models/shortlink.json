@@ -1,0 +1,33 @@
+{
+  "name": "shortlink",
+  "plural": "shortlinks",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "number",
+      "id": true,
+      "generated": false,
+      "required": true
+    },
+    "url": {
+      "type": "string",
+      "required": true
+    },
+    "short": {
+      "type": "string",
+      "required": true
+    },
+    "date": {
+      "type": "date",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
