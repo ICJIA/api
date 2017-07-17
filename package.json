@@ -7,6 +7,7 @@
   },
   "scripts": {
     "lint": "eslint .",
+    "dev": "nodemon server/server.js --watch common --watch server",
     "start": "node .",
     "posttest": "npm run lint && nsp check"
   },
@@ -24,6 +25,7 @@
   "devDependencies": {
     "eslint": "^3.17.1",
     "eslint-config-loopback": "^8.0.0",
+    "nodemon": "^1.11.0",
     "nsp": "^2.1.0",
     "uuid-validate": "0.0.2"
   },
