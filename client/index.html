@@ -66,7 +66,7 @@
 
 
 
-  <div class="center" style="margin-top: 100px;">
+  <div class="center" style="margin-top: 20px;">
       <div class="status" style="width: 280px;">
       <div class="">
         <strong>Started:</strong>
@@ -104,6 +104,7 @@
       </div>
     </footer>
     <script>
+
       $.getJSON( "/status", function( data ) {
         var items = [];
         var uptime = moment.utc(data["uptime"]*1000).format('HH:mm:ss')
