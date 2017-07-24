@@ -7,7 +7,7 @@ module.exports = function(Shortlink) {
 
 
 
-  Shortlink.observe('before save', function updateTimestamp(ctx, next) {
+  Shortlink.observe('before save', function updateModel(ctx, next) {
 
     var seed = utils.generateSeed();
     if (ctx.instance) {
